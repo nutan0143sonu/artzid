@@ -1,0 +1,115 @@
+{% block subject %}Verification Email from ArtzID{% endblock %}
+{% block html %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        .btn {
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Red */
+        .danger {
+            border-color: #f44336;
+            color: red;
+        }
+
+        .danger:hover {
+            background: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+
+<body bgcolor="#ECECEC  ">
+
+    <br>
+    <br>
+    <table align="center" border="1" width="50%" bgcolor="white" bordercolor="#f44336">
+
+        <tr>
+            <td>
+                <div class="card">
+                    <div class="container">
+                        <table align="center">
+                            <tr>
+                                <td align="center">
+                                    <img align="center" alt=""
+                                        src="https://res.cloudinary.com/dyjrywjml/raw/upload/v1565157801/mh0wjqicqaz5ohpecy8t.jpg"
+                                        width="330.5">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 style="text-align: center;">Hello <strong>{{name}}</strong></h3><br>
+
+                                    <h3><span style="font-size:18px"><span style="color:#000000">
+                                                <div style="margin: 20px;">This email has been sent to you to verify you
+                                                    email address {{ email}} Please use the otp to verify your email:
+                                                </div>
+                                            </span></span></h3>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <button class="btn danger">{{otp}}</button>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br>
+                                    <div style="margin-left: 30px; font-size: 18px;">Please note, if you have NOT
+                                        initiated this verification, you
+                                        may kindly ignore this message</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                    <div style="margin-left: 30px;font-size:18px;">
+                                        <p>Sincerely</p>
+                                        <p>Mobiloitte Team</p>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+
+
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
+
+{% endblock %}
