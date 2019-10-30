@@ -3,7 +3,7 @@ chardet==3.0.4
 cloudinary==1.16.0
 coreapi==2.3.3
 coreschema==0.0.4
-Django==1.11.17
+Django==1.11.23
 django-cors-headers==3.0.2
 django-material==1.1.1
 django-render-block==0.6
